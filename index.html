@@ -142,15 +142,6 @@
             cursor: pointer;
             font-size: 0.9em;
         }
-
-        @media (max-width: 600px) {
-            .card {
-                padding: 25px;
-            }
-            h1 {
-                font-size: 2em;
-            }
-        }
     </style>
 </head>
 
@@ -170,13 +161,7 @@
         <h2>Обо мне</h2>
         <p>
             Я начинающий программист, активно развивающийся в сфере информационных технологий.
-            Обладаю высокой целеустремлённостью, ответственным подходом к работе и
-            сильной мотивацией к обучению.
-        </p>
-        <p>
-            Умею писать несложные программы и понимать логику работы кода.
-            Если задача подробно объяснена, я полностью погружаюсь в процесс
-            и довожу её до результата. Быстро осваиваю новые инструменты и технологии.
+            Обладаю высокой целеустремлённостью и мотивацией к обучению.
         </p>
     </section>
 
@@ -187,44 +172,6 @@
             <span>Python</span>
             <span>JavaScript</span>
         </div>
-        <p class="muted" style="margin-top:10px;">
-            Базовые знания веб-разработки, логики программирования и работы с кодом.
-        </p>
-    </section>
-
-    <section>
-        <h2>Опыт работы</h2>
-        <div class="job">
-            <h3>IT Solutions Group</h3>
-            <p class="job-title">Программист / IT-специалист</p>
-            <span class="period">3 года</span>
-            <ul>
-                <li>Разработка программ для личных задач и практического применения</li>
-                <li>Работа из дома в удалённом формате</li>
-                <li>Переход от учебных и личных проектов к реальным рабочим задачам</li>
-                <li>Анализ требований и поиск оптимальных решений</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Образование</h2>
-        <p>
-            <strong>Токмокский лицей имени Жусупа Баласагына</strong><br>
-            Специальность: Инженерия
-        </p>
-        <p>
-            Дополнительно: самообучение, практика, изучение программирования
-            по онлайн-материалам и документации.
-        </p>
-    </section>
-
-    <section>
-        <h2>Проекты</h2>
-        <p class="muted">
-            В данный момент публичные проекты отсутствуют.
-            Активно работаю над практикой и развитием навыков.
-        </p>
     </section>
 
     <section>
@@ -236,13 +183,30 @@
         </div>
     </section>
 
+    <!-- QR КОД -->
+    <section>
+        <h2>QR-код</h2>
+        <div id="qrcode"></div>
+        <p class="muted">Отсканируйте, чтобы открыть сайт</p>
+    </section>
+
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
 
 <script>
     function toggleTheme() {
         document.body.classList.toggle("dark");
         document.body.classList.toggle("light");
     }
+
+    new QRCode(document.getElementById("qrcode"), {
+        https://arurffs.github.io/resume/
+        width: 180,
+        height: 180,
+        colorDark: "#00eaff",
+        colorLight: "#ffffff"
+    });
 </script>
 
 </body>
